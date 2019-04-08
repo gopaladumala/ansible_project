@@ -1,0 +1,14 @@
+web ansible_ssh_host=172.31.14.35
+db ansible_ssh_host=172.31.6.3
+
+[webserver]
+web
+
+[dbserver]
+db
+
+
+
+[datacenter:children]
+webserver
+dbserver
