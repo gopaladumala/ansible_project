@@ -1,0 +1,13 @@
+--- # This is first playbook
+- hosts: all
+  user: ansadmin
+  become: true
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: uminstall  softwares
+      yum: name={{ item }} state=absent
+      loop:
+        - git
+        - httpd
+        - telnet
