@@ -1,0 +1,10 @@
+--- # this is first playbook
+- hosts: all
+  user: ansadmin
+  become: true
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: uninstall git software
+      yum: name=git state=absent
+
