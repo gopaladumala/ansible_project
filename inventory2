@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 web ansible_ssh_host=172.31.29.247
 db ansible_ssh_host=172.31.30.36
+=======
+web ansible_ssh_host=172.31.14.35
+db ansible_ssh_host=172.31.6.3
+>>>>>>> 13337651f51cfe6e9ff3ab9d8a8041afb8be8c3f
 
 [webserver]
 web
@@ -8,6 +13,10 @@ web
 db
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13337651f51cfe6e9ff3ab9d8a8041afb8be8c3f
 [datacenter:children]
 webserver
 dbserver
