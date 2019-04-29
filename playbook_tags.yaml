@@ -1,0 +1,15 @@
+--- # this is first playbook
+- hosts: all
+  user: ansadmin
+  become: true
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: run the uptime command 
+      raw: /usr/bin/uptime >> /home/ansadmin/start.log
+      tags: 
+       - uptime_tag
+    - name: list the floders
+      raw: ls -alt >> /home/ansadmin/var.log
+      tags: 
+       - log_tag
